@@ -1,0 +1,165 @@
+* {
+    text-align: center; /* All text will be centered */
+    transition: 0.5s; /* Changes will happen in 0.5 seconds */
+    scroll-behavior: smooth; /* When you click a link that moves you on the page, the scrolling will be smooth */
+    font-family: "Roboto", sans-serif; /* The primary font will be Roboto, if not available, a generic sans-serif font will be used */
+    text-decoration: none; /* Removes underlines from text used for links. */
+}
+
+header {
+    color: white; /* Text color in the header will be white */
+    background-color: black; /* The background of the header will be black */
+    border-radius: 1rem; /* Rounds the corners of the header */
+}
+
+nav {
+    display: flex; /* Puts the navigation items next to each other in a row */
+    justify-content: space-evenly; /* Distributes the navigation items */
+}
+
+nav a {
+    width: 10rem; /* Puts a width for each navigation button */
+    height: auto; /* The height adjust to its content */
+    color: white; /* Text color of the buttons will be white */
+    border-radius: 1rem; /* Rounds the corners of the buttons */
+}
+
+nav a:hover {
+    color: black; /* Changes the text color to black */
+    background-color: white; /* Changes the background color to white */
+}
+
+h1, h2, h3 {
+    padding: 1rem; /* Adds padding around the text */
+}
+
+img {
+    margin-top: 1rem; /* Adds space above each image */
+}
+
+header nav {
+    padding-bottom: 1rem; /* Adds space below the navigation bar in the header */
+}
+
+.selected {
+    color: black; /* Text color will be black */
+    background-color: white; /* Background color will be white */
+    box-shadow: 0 0 1rem white; /* Adds a white glowing effect around the element. */
+}
+
+main img {
+    box-shadow: 0 0 1rem white; /* Adds a white glowing effect around the image */
+    border-radius: 1rem; /* Rounds the corners of the image */
+    width: 25rem; /* Sets the width of the image */
+    height: 15rem; /* Sets the height of the image */
+    margin: 1rem; /* Adds space around the image */
+}
+
+main img:hover:not(#presentation img) {
+    transform: scale(1.1) rotate(5deg); /* When hovered, the image will slightly scale up 1.1 times and rotate 5 degree. */
+}
+
+#presentation img {
+    width: 20rem; /* Sets the width of this specific image */
+    height: auto; /* The height adjust to its content */
+    border-radius: 50%; /* Makes the image perfectly round */
+    box-shadow: 0 0 1rem black; /* Adds a black shadow around the image */
+}
+
+.skills {
+    display: flex; /* Puts items in this section next to each other */
+    justify-content: center; /* Centers the items horizontally in the section */
+}
+
+.projects {
+    display: grid; /* Put items inside this section in a grid */
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal width */
+    gap: 1rem; /* Adds space between the items */
+}
+
+article {
+    padding: 0 1rem 0 1rem; /* Adds internal space, 1rem left/right */
+    color: white; /* Text color in the article will be white */
+    background-color: black; /* The background of the article will be black */
+    border-radius: 1rem; /* Rounds the corners of the article */
+}
+
+#contact, form {
+    display: flex; /* Puts items in the form next to each other */
+    flex-direction: column; /* Puts items vertically in a column */
+    align-items: center; /* Centers items horizontally */
+}
+
+form {
+    padding: 1rem; /* Adds space within the form */
+    width: 25rem; /* Sets the width of the form */
+    height: auto; /* The height adjust to its content */
+    border-radius: 1rem; /* Rounds the corners of the form */
+    color: white; /* Text color in the form will be white */
+    background-color: black; /* The background of the form will be black */
+}
+
+form button {
+    width: 20rem; /* Sets the width of the button */
+    height: auto; /* The height adjust to its content */
+    background-color: black; /* The background of the button will be black */
+    color: white; /* Text color of the button will be white */
+    border-radius: 1rem; /* Rounds the corners of the button */
+}
+
+form button:hover {
+    cursor: pointer; /* Changes the mouse cursor to a hand when over the button */
+    color: black; /* Changes the text color to black */
+    background-color: white; /* Changes the background color to white */
+}
+
+form input, form textarea {
+    border-radius: 1rem; /* Rounds the corners of inputs */
+    margin-bottom: 1rem; /* Adds space below each inputs */
+    width: 20rem; /* Sets the width of the inputs */
+    height: auto; /* The height adjust to its content */
+}
+
+#contact div {
+    display: flex; /* Puts items inside this div next to each other. */
+}
+
+.social {
+    width: 5rem; /* Sets the width of the social icons */
+    height: 5rem; /* Sets the height of the social icons */
+    border-radius: 50%; /* Makes the icon a circle */
+    box-shadow: 0 0 1rem black; /* Adds a black shadow effect around the icons */
+}
+
+@media (max-width: 1450px) {
+    .projects {
+        font-size: smaller; /* Text in the projects section will be smaller */
+    }
+
+    main img {
+        width: 10rem; /* Images in the main content will be smaller */
+        height: 5rem; /* Images in the main content will be smaller */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(1, 1fr); /* The projects section will display items in a single column */
+    }
+}
+
+@media (max-width: 480px) {
+    #presentation img {
+        width: 10rem; /* The presentation image will be even smaller */
+        height: auto;
+    }
+
+    header nav {
+        flex-direction: column; /* The navigation buttons in the header will be vertically */
+        align-items: center; /* The navigation buttons will be centered horizontally */
+    }
+
+     header a {
+        margin: 0.5rem 0 0.5rem; /* Adds vertical space between header links */
+    }
+}
